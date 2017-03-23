@@ -1,0 +1,249 @@
+html {
+  background-color: #000000;
+  overflow: hidden;
+}
+ 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  flex-flow: column wrap;
+  z-index: 94;
+}
+ 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 95;
+}
+ 
+header {
+  position: relative;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 96;
+}
+ 
+footer {
+  width: 100%;
+  position: relative;
+  top: -37em;
+  text-align: right;
+  color: white;
+  font-family: 'Amatic SC';
+  font-size: 1.5em;
+  z-index: 97;
+}
+ 
+article {
+  position: relative;
+  top: -22em;
+  text-align: center;
+}
+ 
+li {
+  display: block;
+}
+ 
+a {
+  text-decoration: none;
+}
+ 
+h1, h2, h3, h4, p {
+  color: white;
+  z-index: 93;
+}
+ 
+h1 {
+  margin: 0 .2em;
+  font-size: 2.5em;
+  font-family: 'Amatic SC';
+}
+ 
+h1:not(:first-child) {
+  position: relative;
+  top: -10em;
+}
+ 
+h2 {
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+ 
+h3 {
+  font-size: 15em;
+  font-family: 'Jim Nightshade', cursive;
+  height: 0em;
+  position: relative;
+  top: -1.6em;
+}
+ 
+form {
+  padding-bottom: 2em;
+}
+ 
+.hide {
+  display: none;
+}
+ 
+input {
+  background-color: #222447;
+  background: radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background: webkit-radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background: -moz-radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background-size: 350%;
+  -webkit-animation: juicy 10s ease infinite;
+  -moz-animation: juicy 10s ease infinite;
+  animation: juicy 10s ease infinite;
+  height: 1em;
+  width: 12em;
+  z-index: 255;
+  color: white;
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-top-color: #2a2f38;
+  border-bottom-color: #9da7b7;
+  border-right-color: #737c8c;
+  border-left-color: #797e87;
+}
+ 
+.circle {
+  background-color: #222447;
+  background: radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background: webkit-radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background: -moz-radial-gradient(circle, #0a0d35, #131428, #080c3f, #131428, #000000);
+  background-size: 350%;
+  -webkit-animation: juicy 10s ease infinite;
+  -moz-animation: juicy 10s ease infinite;
+  animation: juicy 10s ease infinite;
+  height: 17.5em;
+  width: 17.5em;
+  border-radius: 75em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 98;
+}
+ 
+#answer {
+  position: absolute;
+  top: 12.3em;
+  width: 11em;
+  z-index: 99;
+}
+ 
+#triangle {
+  position: relative;
+  display: none;
+  top: 2.1em;
+  border-left: 6.9em solid transparent;
+  border-right: 6.9em solid transparent;
+  border-top: 11.8em solid #0f33aa;
+  border-radius: .3em;
+  margin: 1em;
+  z-index: 99;
+}
+ 
+/*These are aesthetic divs, made to make the background appear spherical */
+ 
+.light {
+  height: 18.4em;
+  width: 18.4em;
+  position: relative;
+  top: -38em;
+  z-index: 97;
+  border-radius: 75em;
+  background: linear-gradient(to bottom right, white, #141623);
+}
+ 
+.shadow {
+  position: relative;
+  top: -18.75em;
+  height: 20em;
+  width: 20em;
+  border-radius: 75em;
+  border-style: solid;
+  border color: black;
+  border-width: .0em;
+  background: linear-gradient(to bottom left, #2b2d3a, #15161c);
+  z-index: 96;
+}
+ 
+.radial-white {
+  width: 100vw;
+  height: 100vw;
+  border-radius: 75em;
+  position: absolute;
+  top: -30vh;
+  left: -7em;
+  background: radial-gradient(circle, #757575, transparent, transparent, transparent);
+  z-index: 10;
+}
+ 
+.radial-back {
+  position: absolute;
+  top: -3em;
+  left: -24vw;
+  width: 150vw;
+  height: 150vh;
+  background: radial-gradient(circle, #303030, #1a1a1a, transparent, transparent);
+  z-index: 0;
+}
+ 
+.radial-shine{
+  position: absolute;
+  top: -10em;
+  left: -24vw;
+  width: 150vw;
+  height: 150vh;
+  background: radial-gradient(circle, #5b5b5b, transparent, transparent);
+  z-index: 1;
+}
+ 
+/*This is the animation section*/
+ 
+@-webkit-keyframes juicy {
+ 0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+ 
+@-moz-keyframes juicy {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@keyframes juicy {
+    0%{background-position:0% 100%}
+    50%{background-position:100% 0%}
+    100%{background-position:0% 100%}
+}
+ 
+.blue { /*This property is to help hide the font when the screen loads */
+  font-weight: bold;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 1.2em;
+  text-shadow: .1em .1em #03132d;
+  -webkit-animation: color .2s ease;
+  -moz-animation: color .2s ease;
+   animation: color .2s ease;
+}
+ 
+@-webkit-keyframes color{
+    0% { color: #0f33aa; }
+    100% { color: #c0d5f7; }
+}
+ 
+@-moz-keyframes color {
+    0% { color: #0f33aa; }
+    100% { color: #c0d5f7; }
+}
+ 
+@keyframes color {
+    0% { color: #0f33aa; }
+    100% { color: #c0d5f7; }
+}

@@ -1,47 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html lang="en">
  
   <head>
-    <meta charset = "UTF-8">
-    <title>Testing HTML page</title>
+    <meta charset ="UTF-8">
+    <title>You shouldn't be here</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Amatic+SC|Annie+Use+Your+Telescope|Jim+Nightshade" rel="stylesheet">
   </head>
  
-  <body onload="fadeOver(triangle)">
-    <header>
- 
-      <div class="center">
-        <h1>Nihilist</h1></div>
-        <h3>&#8734;</h3>
-        <h1>Ball</h1>
-    </header>
- 
-    <article class="container center">
-      <h2>All the Answers Are Belong to Us</h2>
-      
-      <form onsubmit="shakeBall(), fadeOver(result), fadeOver(triangle)">     
-        <input type="text">
-        <input type="submit" value="Shake Me" class="hide">    
-      </form>
-      <div class="circle">
-        <div id="triangle">
-        </div>
-        <div id="answer"></div>
-      </div>
-      <div class="shadow"></div>
-      <div class="light"></div>
-    </article>
+  <body onload="fadeOver(triangle), getFace()">
    
+    <div class="container">
+ 
+      <header class="center">
+        <h1>Nihilist</h1>
+                  <h3>&#8734;</h3>
+        <h1>Ball</h1>
+      </header>
+ 
+      <article class="center">
+        <h2>All the Answers Are Belong to Us</h2>
+     
+        <form onsubmit="shakeBall(), fadeOver(typeSpace), fadeOver(triangle)" name="shakey" value="shakey" action="test.js">     
+          <input type="text" name="textinput" id="textinput" value="">
+          <input type="submit" value="Shake Me" class="hide">    
+        </form>
+        <div class="shadow center">
+          <div class="light center">
+            <div class="circle center">
+              <div id="triangle"></div>
+              <div id="answer""></div>
+            </div>
+          </div>
+        </div>
+       <footer>
+        <p>&copy;2017 Elle Pope</p>
+       </footer>
+ 
+      </article>
+ 
+    </div>
+ 
     <div class="radial-white"></div>
     <div class="radial-shine"></div>
     <div class="radial-back"></div>
  
-    <footer>
-      <p>&copy;2017 Elle Pope</p>
-    </footer>
-    
     <script src="shakey.js"></script>
     
   </body>

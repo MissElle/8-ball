@@ -5,40 +5,38 @@ html {
  
 .container {
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  flex-flow: column wrap;
-  z-index: 94;
+  z-index: 99;
 }
  
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 95;
+  align-content: center;
+  flex-flow: column wrap;
+  text-align: center;
 }
  
 header {
-  position: relative;
-  top: 0;
-  text-align: center;
   width: 100%;
   z-index: 96;
 }
  
 footer {
   width: 100%;
-  position: relative;
-  top: -37em;
   text-align: right;
   color: white;
   font-family: 'Amatic SC';
   font-size: 1.5em;
-  z-index: 97;
+  position: absolute;
+  bottom: -.5em;
+  right: .5em;
+  z-index: 95;
 }
  
 article {
-  position: relative;
-  top: -22em;
   text-align: center;
 }
  
@@ -52,34 +50,35 @@ a {
  
 h1, h2, h3, h4, p {
   color: white;
+  display: block;
   z-index: 93;
 }
  
 h1 {
   margin: 0 .2em;
-  font-size: 2.5em;
+  font-size: 4em;
   font-family: 'Amatic SC';
 }
  
 h1:not(:first-child) {
   position: relative;
-  top: -10em;
+  top: -1em;
 }
  
 h2 {
   font-family: 'Annie Use Your Telescope', cursive;
+  position: relative;
+  top: 0em;
 }
  
 h3 {
-  font-size: 15em;
+  font-size: 2em;
   font-family: 'Jim Nightshade', cursive;
-  height: 0em;
-  position: relative;
-  top: -1.6em;
 }
  
 form {
   padding-bottom: 2em;
+  z-index: 99;
 }
  
 .hide {
@@ -97,7 +96,6 @@ input {
   animation: juicy 10s ease infinite;
   height: 1em;
   width: 12em;
-  z-index: 255;
   color: white;
   text-align: center;
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -107,6 +105,7 @@ input {
   border-bottom-color: #9da7b7;
   border-right-color: #737c8c;
   border-left-color: #797e87;
+  z-index: 99;
 }
  
 .circle {
@@ -121,48 +120,18 @@ input {
   height: 17.5em;
   width: 17.5em;
   border-radius: 75em;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   z-index: 98;
 }
  
-#answer {
-  position: absolute;
-  top: 12.3em;
-  width: 11em;
-  z-index: 99;
-}
- 
-#triangle {
-  position: relative;
-  display: none;
-  top: 2.1em;
-  border-left: 6.9em solid transparent;
-  border-right: 6.9em solid transparent;
-  border-top: 11.8em solid #0f33aa;
-  border-radius: .3em;
-  margin: 1em;
-  z-index: 99;
-}
- 
-/*These are aesthetic divs, made to make the background appear spherical */
- 
 .light {
   height: 18.4em;
-  width: 18.4em;
-  position: relative;
-  top: -38em;
+ width: 18.4em;
   z-index: 97;
   border-radius: 75em;
   background: linear-gradient(to bottom right, white, #141623);
 }
  
 .shadow {
-  position: relative;
-  top: -18.75em;
   height: 20em;
   width: 20em;
   border-radius: 75em;
@@ -173,6 +142,27 @@ input {
   z-index: 96;
 }
  
+#answer {
+  width: 11em;
+  z-index: 99;
+  position: relative;
+  top: 0;
+  margin: .5em 0 0 0;
+}
+ 
+#triangle {
+  display: none;
+  border-left: 6.9em solid transparent;
+  border-right: 6.9em solid transparent;
+  border-top: 11.8em solid #0f33aa;
+  border-radius: .3em;
+  position: absolute;
+  margin: 1.8em 0 0 0;
+  z-index: 99;
+}
+ 
+/*These are "light" divs, made to make the background appear spherical and ball like */
+ 
 .radial-white {
   width: 100vw;
   height: 100vw;
@@ -180,8 +170,8 @@ input {
   position: absolute;
   top: -30vh;
   left: -7em;
-  background: radial-gradient(circle, #757575, transparent, transparent, transparent);
-  z-index: 10;
+  background: radial-gradient(circle, #757560, transparent, transparent, transparent);
+  z-index: 3;
 }
  
 .radial-back {
@@ -190,8 +180,8 @@ input {
   left: -24vw;
   width: 150vw;
   height: 150vh;
-  background: radial-gradient(circle, #303030, #1a1a1a, transparent, transparent);
-  z-index: 0;
+  background: radial-gradient(circle, #26241d, #11110a, transparent, transparent);
+  z-index: 1;
 }
  
 .radial-shine{
@@ -200,14 +190,14 @@ input {
   left: -24vw;
   width: 150vw;
   height: 150vh;
-  background: radial-gradient(circle, #5b5b5b, transparent, transparent);
-  z-index: 1;
+  background: radial-gradient(circle, #545445, transparent, transparent);
+  z-index: 2;
 }
  
 /*This is the animation section*/
  
 @-webkit-keyframes juicy {
- 0%{background-position:100% 0%}
+  0%{background-position:100% 0%}
   50%{background-position:0% 100%}
   100%{background-position:100% 0%}
 }
@@ -223,27 +213,42 @@ input {
     100%{background-position:0% 100%}
 }
  
+@-webkit-keyframes color{
+    0% { color: transparent; text-shadow: .1em .1em transparent; }
+    10% { color: transparent; text-shadow: .1em .1em transparent; }
+    20% { color: transparent; text-shadow: .1em .1em transparent; }
+    30% { color: transparent; text-shadow: .1em .1em transparent; }
+    40% { color: transparent; text-shadow: .1em .1em transparent; }
+    50% { color: transparent; text-shadow: .1em .1em transparent; }
+    100% { color: #c0d5f7; text-shadow: .1em .1em #03132d;}
+}
+ 
+@-moz-keyframes color {
+    0% { color: transparent; text-shadow: .1em .1em transparent; }
+    10% { color: transparent; text-shadow: .1em .1em transparent; }
+    20% { color: transparent; text-shadow: .1em .1em transparent; }
+    30% { color: transparent; text-shadow: .1em .1em transparent; }
+    40% { color: transparent; text-shadow: .1em .1em transparent; }
+    50% { color: transparent; text-shadow: .1em .1em transparent; }
+    100% { color: #c0d5f7; text-shadow: .1em .1em #03132d;}
+}
+ 
+@keyframes color {
+    0% { color: transparent; text-shadow: .1em .1em transparent; }
+    10% { color: transparent; text-shadow: .1em .1em transparent; }
+    20% { color: transparent; text-shadow: .1em .1em transparent; }
+    30% { color: transparent; text-shadow: .1em .1em transparent; }
+    40% { color: transparent; text-shadow: .1em .1em transparent; }
+    50% { color: transparent; text-shadow: .1em .1em transparent; }
+    100% { color: #c0d5f7;   text-shadow: .1em .1em #03132d;}
+}
+ 
 .blue { /*This property is to help hide the font when the screen loads */
   font-weight: bold;
   font-family: 'Annie Use Your Telescope', cursive;
   font-size: 1.2em;
+  -webkit-animation: color .7s ease-in-out;
+  -moz-animation: color .7s ease-in-out;
+   animation: color .7s ease-in-out;
   text-shadow: .1em .1em #03132d;
-  -webkit-animation: color .2s ease;
-  -moz-animation: color .2s ease;
-   animation: color .2s ease;
-}
- 
-@-webkit-keyframes color{
-    0% { color: #0f33aa; }
-    100% { color: #c0d5f7; }
-}
- 
-@-moz-keyframes color {
-    0% { color: #0f33aa; }
-    100% { color: #c0d5f7; }
-}
- 
-@keyframes color {
-    0% { color: #0f33aa; }
-    100% { color: #c0d5f7; }
 }

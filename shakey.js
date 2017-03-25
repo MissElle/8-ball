@@ -44,21 +44,88 @@ var answers=[
 '<br>yes',
 '<br>no',
 '<br>definitely<br>no',
-'Why are you wasting<br> your time?'];
+'Why are you wasting<br> your time?',
+'try again never',
+'try again later'];
  
 var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
  
 function shakeBall() {
-  var text = document.shakey.textinput.value;
-  var textInput = text.toLowerCase();
+  var text = document.shakey.textinput.value.toLowerCase();
+  var textInput = text.replace(/[^A-Za-z0-9]/gi, '');
  
       switch(textInput) {
  
-              case 'what is love':
+              case 'whatislove':
                  typeSpace.innerHTML = '<p class="blue">Baby don&lsquo;t<br> hurt me</p>';
            event.preventDefault();
                 break;
              
+        case 'whatisrickrolling':
+           typeSpace.innerHTML = '<p class="blue">Never gonna give<br> you up </p>';
+          event.preventDefault();
+          break;
+ 
+        case 'dotheylikeme':
+           typeSpace.innerHTML = '<p class="blue">Just ask them<br> yourself</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'doeshelikeme':
+           typeSpace.innerHTML = '<p class="blue">Just ask him<br> yourself</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'doesshelikeme':
+           typeSpace.innerHTML = '<p class="blue">Just ask her<br> yourself</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'whoiswdgaster':
+           typeSpace.innerHTML = '<p class="blue">Beware of the man<br> who speaks in<br> hands</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'whoisgaster':
+           typeSpace.innerHTML = '<p class="blue">Beware of the man<br> who speaks in<br> hands</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'doyoubelieveinmagic':
+           typeSpace.innerHTML = '<p class="blue">Only in a <br> young girl&apos;s<br> heart</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'areyoumagic':
+           typeSpace.innerHTML = '<p class="blue">no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'areyoureallymagic':
+           typeSpace.innerHTML = '<p class="blue">no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'doyouknowthemuffinman':
+           typeSpace.innerHTML = '<p class="blue">the muffin man?</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'themuffinman':
+           typeSpace.innerHTML = '<p class="blue">the muffin man...</p>';
+          event.preventDefault();
+          break;
+ 
+        case 'whatistheanswertotheultimatequestionoflifetheuniverseandeverything':
+           typeSpace.innerHTML = '<p class="blue">42<br>but you<br> know this</p>';
+          event.preventDefault();
+          break;
+ 
+         case 'yolo':
+           typeSpace.innerHTML = '<p class="blue">carpe<br>diem</p>';
+          event.preventDefault();
+          break;
+ 
               default:
                 for(var i=0; i < answers.length; i++) {
             var answer = Math.floor(Math.random() * answers.length); }        

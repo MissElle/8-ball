@@ -1,3 +1,5 @@
+/*This is where the CSS will go*/
+ 
 html {
   background-color: #000000;
   overflow: hidden;
@@ -5,7 +7,6 @@ html {
  
 .container {
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
   z-index: 99;
 }
@@ -29,10 +30,10 @@ footer {
   text-align: right;
   color: white;
   font-family: 'Amatic SC';
-  font-size: 1.5em;
+  font-size: 2.8vh;
   position: absolute;
-  bottom: -.5em;
-  right: .5em;
+  bottom: -1vh;
+  right: 2vh;
   z-index: 95;
 }
  
@@ -56,28 +57,29 @@ h1, h2, h3, h4, p {
  
 h1 {
   margin: 0 .2em;
-  font-size: 4em;
+  font-size: 8vh;
   font-family: 'Amatic SC';
 }
  
 h1:not(:first-child) {
   position: relative;
-  top: -1em;
+  top: -5vh;
 }
  
 h2 {
   font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 3vh;
   position: relative;
-  top: 0em;
+  top: 0vh;
 }
  
 h3 {
-  font-size: 2em;
+  font-size: 4vh;
   font-family: 'Jim Nightshade', cursive;
 }
  
 form {
-  padding-bottom: 2em;
+  padding-bottom: 1.6vh;
   z-index: 99;
 }
  
@@ -94,13 +96,13 @@ input {
   -webkit-animation: juicy 10s ease infinite;
   -moz-animation: juicy 10s ease infinite;
   animation: juicy 10s ease infinite;
-  height: 1em;
-  width: 12em;
+  height: 3vh;
+  width: 27vh;
   color: white;
   text-align: center;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 2vh;
   border-top-color: #2a2f38;
   border-bottom-color: #9da7b7;
   border-right-color: #737c8c;
@@ -117,47 +119,47 @@ input {
   -webkit-animation: juicy 10s ease infinite;
   -moz-animation: juicy 10s ease infinite;
   animation: juicy 10s ease infinite;
-  height: 17.5em;
-  width: 17.5em;
+  height: 33.5vh;
+  width: 33.5vh;
   border-radius: 75em;
   z-index: 98;
 }
  
 .light {
-  height: 18.4em;
- width: 18.4em;
+  height: 35.3vh;
+  width: 35.3vh;
   z-index: 97;
   border-radius: 75em;
   background: linear-gradient(to bottom right, white, #141623);
 }
  
 .shadow {
-  height: 20em;
-  width: 20em;
+  height: 38vh;
+  width: 38vh;
   border-radius: 75em;
   border-style: solid;
   border color: black;
-  border-width: .0em;
+  border-width: .0;
   background: linear-gradient(to bottom left, #2b2d3a, #15161c);
   z-index: 96;
 }
  
 #answer {
-  width: 11em;
+  width:22vh;
   z-index: 99;
   position: relative;
   top: 0;
-  margin: .5em 0 0 0;
+  margin: 1vh 0 0 0;
 }
  
 #triangle {
   display: none;
-  border-left: 6.9em solid transparent;
-  border-right: 6.9em solid transparent;
-  border-top: 11.8em solid #0f33aa;
+  border-left: 13.2vh solid transparent;
+  border-right: 13.2vh solid transparent;
+  border-top: 24vh solid #0f33aa;
   border-radius: .3em;
   position: absolute;
-  margin: 1.8em 0 0 0;
+  margin: 3.7vh 0 0 0;
   z-index: 99;
 }
  
@@ -169,14 +171,14 @@ input {
   border-radius: 75em;
   position: absolute;
   top: -30vh;
-  left: -7em;
+  left: -14vh;
   background: radial-gradient(circle, #757560, transparent, transparent, transparent);
   z-index: 3;
 }
  
 .radial-back {
   position: absolute;
-  top: -3em;
+  top: -6vh;
   left: -24vw;
   width: 150vw;
   height: 150vh;
@@ -186,7 +188,7 @@ input {
  
 .radial-shine{
   position: absolute;
-  top: -10em;
+  top: -20vh;
   left: -24vw;
   width: 150vw;
   height: 150vh;
@@ -197,7 +199,7 @@ input {
 /*This is the animation section*/
  
 @-webkit-keyframes juicy {
-  0%{background-position:100% 0%}
+ 0%{background-position:100% 0%}
   50%{background-position:0% 100%}
   100%{background-position:100% 0%}
 }
@@ -246,9 +248,9 @@ input {
 .blue { /*This property is to help hide the font when the screen loads */
   font-weight: bold;
   font-family: 'Annie Use Your Telescope', cursive;
-  font-size: 1.2em;
+  font-size: 2.3vh;
   -webkit-animation: color .7s ease-in-out;
   -moz-animation: color .7s ease-in-out;
    animation: color .7s ease-in-out;
-  text-shadow: .1em .1em #03132d;
+  text-shadow: .2vh .2vh #03132d;
 }

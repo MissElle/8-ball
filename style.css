@@ -147,9 +147,7 @@ input {
 #answer {
   width:22vh;
   z-index: 99;
-  position: relative;
-  top: 0;
-  margin: 1vh 0 0 0;
+  position: absolute;
 }
  
 #triangle {
@@ -158,8 +156,11 @@ input {
   border-right: 13.2vh solid transparent;
   border-top: 24vh solid #0f33aa;
   border-radius: .3em;
-  position: absolute;
-  margin: 3.7vh 0 0 0;
+  position: relative;
+  height: 0em;
+  width: 0em;
+  overflow: visible;
+  top: 2.1em;
   z-index: 99;
 }
  
@@ -199,7 +200,7 @@ input {
 /*This is the animation section*/
  
 @-webkit-keyframes juicy {
- 0%{background-position:100% 0%}
+  0%{background-position:100% 0%}
   50%{background-position:0% 100%}
   100%{background-position:100% 0%}
 }
@@ -226,7 +227,7 @@ input {
 }
  
 @-moz-keyframes color {
-    0% { color: transparent; text-shadow: .1em .1em transparent; }
+   0% { color: transparent; text-shadow: .1em .1em transparent; }
     10% { color: transparent; text-shadow: .1em .1em transparent; }
     20% { color: transparent; text-shadow: .1em .1em transparent; }
     30% { color: transparent; text-shadow: .1em .1em transparent; }

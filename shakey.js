@@ -24,7 +24,7 @@ var answers=[
 '<br>life has a strange<br> way of working <br> things out',
 '<br>please stop <br> asking me <br> questions',
 '<br><br>Trust in Science!',
-'<br>you already know the <br> answer, you are <br> just avoiding <br> the <br> Truth',
+'you already know the <br> answer, you are <br> just avoiding <br> the <br> Truth',
 '<br>In the end <br> we are all <br> stardust',
 '<br><br>Think about your <br> life choices',
 'The idea of boundaries is laughable. Even in this document, there are no limits. All these boundaries were created to make you comfortable. And in that comfort you found complacency with the world around you, whilst constantly seeking a means to an end that does not exist. You can&apos;t even read the end of this variable object unless you have a smidgen of programming knowledge, and even then what did you achieve? An answer that does not exist.',
@@ -57,72 +57,72 @@ function shakeBall() {
       switch(textInput) {
  
         case 'whatislove':
-          typeSpace.innerHTML = '<p class="blue">Baby don&lsquo;t<br> hurt me</p>';
+          typeSpace.innerHTML = '<p class="blue"><br>Baby don&lsquo;t<br> hurt me</p>';
            event.preventDefault();
                 break;
              
         case 'whatisrickrolling':
-           typeSpace.innerHTML = '<p class="blue">Never gonna give<br> you up </p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Never gonna give<br> you up </p>';
           event.preventDefault();
           break;
  
         case 'dotheylikeme':
-           typeSpace.innerHTML = '<p class="blue">Just ask them<br> yourself</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Just ask them<br> yourself</p>';
           event.preventDefault();
           break;
  
         case 'doeshelikeme':
-           typeSpace.innerHTML = '<p class="blue">Just ask him<br> yourself</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Just ask him<br> yourself</p>';
           event.preventDefault();
           break;
  
         case 'doesshelikeme':
-           typeSpace.innerHTML = '<p class="blue">Just ask her<br> yourself</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Just ask her<br> yourself</p>';
           event.preventDefault();
           break;
  
         case 'whoiswdgaster':
-           typeSpace.innerHTML = '<p class="blue">Beware of the man<br> who speaks in<br> hands</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Beware of the man<br> who speaks in<br> hands</p>';
           event.preventDefault();
           break;
  
         case 'whoisgaster':
-           typeSpace.innerHTML = '<p class="blue">Beware of the man<br> who speaks in<br> hands</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Beware of the man<br> who speaks in<br> hands</p>';
           event.preventDefault();
           break;
  
         case 'doyoubelieveinmagic':
-           typeSpace.innerHTML = '<p class="blue">Only in a <br> young girl&apos;s<br> heart</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>Only in a <br> young girl&apos;s<br> heart</p>';
           event.preventDefault();
           break;
  
         case 'areyoumagic':
-           typeSpace.innerHTML = '<p class="blue">no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
           event.preventDefault();
           break;
  
         case 'areyoureallymagic':
-           typeSpace.innerHTML = '<p class="blue">no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>no, I don&apos;t have<br> a young girl&apos;s <br> heart</p>';
           event.preventDefault();
           break;
  
         case 'doyouknowthemuffinman':
-           typeSpace.innerHTML = '<p class="blue">the muffin man?</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>the muffin man?</p>';
           event.preventDefault();
           break;
  
         case 'themuffinman':
-           typeSpace.innerHTML = '<p class="blue">the muffin man...</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>the muffin man...</p>';
           event.preventDefault();
           break;
  
         case 'whatistheanswertotheultimatequestionoflifetheuniverseandeverything':
-           typeSpace.innerHTML = '<p class="blue">42<br>but you<br> know this</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>42<br>but you<br> know this</p>';
           event.preventDefault();
           break;
  
          case 'yolo':
-           typeSpace.innerHTML = '<p class="blue">carpe<br>diem</p>';
+           typeSpace.innerHTML = '<p class="blue"><br>carpe<br>diem</p>';
           event.preventDefault();
           break;
  

@@ -147,7 +147,11 @@ input {
 #answer {
   width:22vh;
   z-index: 99;
-  position: absolute;
+  position: relative;
+  text-align: center;
+  height: 0em;
+  overflow: visible;
+  top: -22vh;
 }
  
 #triangle {

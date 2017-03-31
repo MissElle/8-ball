@@ -20,33 +20,33 @@ function fadeOver(el) {
 //This array contains all the answers to the proceeding function
  
 var answers=[
-'you will not find <br> the answers <br> here.',
-'life has a strange<br> way of working <br> things out',
-'please stop <br> asking me <br> questions',
-'Trust in Science!',
+'<br><br>you will not find <br> the answers <br> here.',
+'<br>life has a strange<br> way of working <br> things out',
+'<br>please stop <br> asking me <br> questions',
+'<br><br>Trust in Science!',
 '<br>you already know the <br> answer, you are <br> just avoiding <br> the <br> Truth',
 '<br>In the end <br> we are all <br> stardust',
-'<br>Think about your <br> life choices',
-'<br><br><br><br><br><br><br><br><br><br><br><br>The idea of boundaries is laughable. Even in this document, there are no limits. All these boundaries were created to make you comfortable. And in that comfort you found complacency with the world around you, whilst constantly seeking a means to an end that does not exist. You can&apos;t even read the end of this variable object unless you have a smidgen of programming knowledge, and even then what did you achieve? An answer that does not exist.',
-'<br>"Death"',
-'What does it <br>matter...',
-'nothing matters <br> anyway',
-'leave me alone',
-'go away',
-'<br>The definition of crazy is to repeat one&apos;s self <br> and expect a <br>different<br> answer.',
-'free thought is an<br> illusion',
+'<br><br>Think about your <br> life choices',
+'The idea of boundaries is laughable. Even in this document, there are no limits. All these boundaries were created to make you comfortable. And in that comfort you found complacency with the world around you, whilst constantly seeking a means to an end that does not exist. You can&apos;t even read the end of this variable object unless you have a smidgen of programming knowledge, and even then what did you achieve? An answer that does not exist.',
+'<br><br>"Death"',
+'<br><br>What does it <br>matter...',
+'<br><br>nothing matters <br> anyway',
+'<br><br>leave me alone',
+'<br><br>go away',
+'The definition of crazy is to repeat one&apos;s self <br> and expect a <br>different<br> answer.',
+'<br>free thought is an<br> illusion',
 '<br>we all <br> die <br> anyways',
-'please don&apos;t ask<br>"Do they like me?"',
-'we all make mistakes.<br> yours are just<br> bigger',
-'I wish I was real<br> like you...',
-'you matter,<br> you mass',
-'<br>42',
-'<br>yes',
-'<br>no',
-'<br>definitely<br>no',
-'Why are you wasting<br> your time?',
-'try again never',
-'try again later'];
+'<br>please don&apos;t ask<br>"Do they like me?"',
+'<br>we all make mistakes.<br> yours are just<br> bigger',
+'<br>I wish I was real<br> like you...',
+'<br>you matter,<br> you mass',
+'<br><br>42',
+'<br><br>yes',
+'<br><br>no',
+'<br><br>definitely<br>no',
+'<br>Why are you wasting<br> your time?',
+'<br><br>try again never',
+'<br><br>try again later'];
  
 var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
  
@@ -56,8 +56,8 @@ function shakeBall() {
  
       switch(textInput) {
  
-              case 'whatislove':
-                 typeSpace.innerHTML = '<p class="blue">Baby don&lsquo;t<br> hurt me</p>';
+        case 'whatislove':
+          typeSpace.innerHTML = '<p class="blue">Baby don&lsquo;t<br> hurt me</p>';
            event.preventDefault();
                 break;
              
@@ -138,8 +138,8 @@ function shakeBall() {
  
 //This is for the opening page, to fade in emojis
  
-var emoticons = ['>_<', '(O_O)', '-_-;', 'TT_TT', '¯\_(ツ)_/¯', '( ͡° ͜ʖ ͡°)', '༼ つ ಥ_ಥ ༽つ', '(•_•)', '( •_•)', 'ಥ_ಥ', '(¬_¬)', 'ರ_ರ', '≧☉_☉≦', '⚆ _ ⚆', 'ᕙ(⇀‸↼‶)ᕗ', '◉_◉', 'ಠ╭╮ಠ' , '(ಥ﹏ಥ)', '༼ つ ◕_◕ ༽つ', '(づ￣ ³￣)づ', 'ఠ_ఠ', 'ޏ₍ ὸ.ό₎ރ', '( ..•˘___˘• .. )',
-'ب_ب', 'Ծ_Ծ', '(⋋▂⋌)', 'Ծ_Ծ', 'ತ_ತ', 'מּ_מּ', '\(!!˚☐˚)/', '(T∩T)', '(︶︹︺)', '(⌣_⌣”)', '(⊙︿⊙)', '(｡•́︿•̀｡)', '●︿●', 'ōۃō', '(∩︵∩)', '@_@', '(๑°︿°๑)', 'ಠ╭╮ಠ', 'ʕ ಡ ﹏ ಡ ʔ', 'ಗಾ ﹏ ಗಾ', '(⌣_⌣”)', '(X╭╮X)', 'X_X', '( ɵ̥̥ _ ɵ̥̥)', '(;﹏;)', '(˃̩̩̥ɷ˂̩̩̥)', '(´;︵;`)', '(ఠ్ఠ ˓̭ ఠ్ఠ)', '(-_-｡)'];
+var emoticons = ['<br><br>>_<', '<br><br>(O_O)', '<br><br>-_-;', '<br><br>TT_TT', '<br><br>¯\_(ツ)_/¯', '<br><br>( ͡° ͜ʖ ͡°)', '<br><br>༼ つ ಥ_ಥ ༽つ', '<br><br>(•_•)', '<br><br>( •_•)', '<br><br>ಥ_ಥ', '<br><br>(¬_¬)', '<br><br>ರ_ರ', '<br><br>≧☉_☉≦', '<br><br>⚆ _ ⚆', '<br><br>ᕙ(⇀‸↼‶)ᕗ', '<br><br>◉_◉', '<br><br>ಠ╭╮ಠ' , '<br><br>(ಥ﹏ಥ)', '<br><br>༼ つ ◕_◕ ༽つ', '<br><br>(づ￣ ³￣)づ', '<br><br>ఠ_ఠ', '<br><br>ޏ₍ ὸ.ό₎ރ', '<br><br>( ..•˘___˘• .. )',
+'<br><br>ب_ب', '<br><br>Ծ_Ծ', '<br><br>(⋋▂⋌)', '<br><br>Ծ_Ծ', '<br><br>ತ_ತ', '<br><br>מּ_מּ', '<br><br>\(!!˚☐˚)/', '<br><br>(T∩T)', '<br><br>(︶︹︺)', '<br><br>(⌣_⌣”)', '<br><br>(⊙︿⊙)', '<br><br>(｡•́︿•̀｡)', '<br><br>●︿●', '<br><br>ōۃō', '<br><br>(∩︵∩)', '<br><br>@_@', '<br><br>(๑°︿°๑)', '<br><br>ಠ╭╮ಠ', '<br><br>ʕ ಡ ﹏ ಡ ʔ', '<br><br>ಗಾ ﹏ ಗಾ', '<br><br>(⌣_⌣”)', '<br><br>(X╭╮X)', '<br><br>X_X', '<br><br>( ɵ̥̥ _ ɵ̥̥)', '<br><br>(;﹏;)', '<br><br>(˃̩̩̥ɷ˂̩̩̥)', '<br><br>(´;︵;`)', '<br><br>(ఠ్ఠ ˓̭ ఠ్ఠ)', '<br><br>(-_-｡)'];
  
 function getFace() {
 for(var i=0; i < emoticons.length; i++) {

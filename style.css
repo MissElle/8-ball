@@ -59,11 +59,7 @@ h1 {
   margin: 0 .2em;
   font-size: 8vh;
   font-family: 'Amatic SC';
-}
- 
-h1:not(:first-child) {
-  position: relative;
-  top: -5vh;
+  display: none;
 }
  
 h2 {
@@ -72,12 +68,12 @@ h2 {
   position: relative;
   top: 0vh;
 }
- 
-h3 {
-  font-size: 4vh;
-  font-family: 'Jim Nightshade', cursive;
+
+img {
+  width: 68vh;
+  z-index: 7;
 }
- 
+
 form {
   padding-bottom: 1.6vh;
   z-index: 99;
@@ -177,28 +173,30 @@ input {
   position: absolute;
   top: -30vh;
   left: -14vh;
-  background: radial-gradient(circle, #757560, transparent, transparent, transparent);
-  z-index: 3;
+  background: radial-gradient(circle, #ffffc9, transparent, transparent, transparent);
+  opacity: .7;
+  z-index: 8;
 }
  
-.radial-back {
+.radial-shine {
+  position: absolute;
+  top: -20vh;
+  left: -24vw;
+  width: 150vw;
+  height: 150vh;
+  background: radial-gradient(circle, #ffffc9, transparent, transparent);
+  opacity: .2;
+  z-index: 4;
+}
+ 
+.radial-back{
   position: absolute;
   top: -6vh;
   left: -24vw;
   width: 150vw;
   height: 150vh;
   background: radial-gradient(circle, #26241d, #11110a, transparent, transparent);
-  z-index: 1;
-}
- 
-.radial-shine{
-  position: absolute;
-  top: -20vh;
-  left: -24vw;
-  width: 150vw;
-  height: 150vh;
-  background: radial-gradient(circle, #545445, transparent, transparent);
-  z-index: 2;
+  z-index: 3;
 }
  
 /*This is the animation section*/

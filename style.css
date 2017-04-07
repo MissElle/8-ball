@@ -175,7 +175,7 @@ input {
   left: -14vh;
   background: radial-gradient(circle, #ffffc9, transparent, transparent, transparent);
   opacity: .7;
-  z-index: 8;
+  z-index: 100;
 }
  
 .radial-shine {

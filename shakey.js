@@ -126,12 +126,12 @@ function shakeBall() {
           event.preventDefault();
           break;
  
-              default:
-                for(var i=0; i < answers.length; i++) {
+          default:
+            for(var i=0; i < answers.length; i++) {
             var answer = Math.floor(Math.random() * answers.length); }        
-                  typeSpace.innerHTML = '<p class="blue">' + answers[answer] + '</p>';
-            event.preventDefault();
-                break;
+              typeSpace.innerHTML = '<p class="blue">' + answers[answer] + '</p>';
+              event.preventDefault();
+              break;
   }
   console.log(textInput);
 }

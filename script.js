@@ -1,5 +1,39 @@
+//rewriting some code, event listeners
+
+window.addEventListener('load', changeToTalk);
+
+//This function checks if a microphone is present on small media devices
+
+function changeToTalk() {
+	
+	var userQuestion = new webkitSpeechRecognition();
+		userQuestion.onresult = function(event) { 
+  	console.log(event);
+		console.log(event.results[0][0].transcript);
+			
+		var questionAsked = event.results[0][0].transcript;
+			
+		shakeBall(questionAsked);
+	}
+	userQuestion.start();
+	
+	
+//	if(navigator.mediaDevices){
+//		 navigator.mediaDevices.getUserMedia({audio: true}).then(function(stream){
+//			 
+//		 });
+//		if(stream.getAudioTracks().length > 0){
+//		console.log('My audio is being accessed!');
+//		}else {
+//			console.log('Audio is being blocked')
+//		}
+//	}else{
+//		console.log('Audio is not available');
+//	}
+}
+
 //This is a fade in for the elements
- 
+
 var triangle = document.getElementById('triangle'); //Declare this element so things fade in on the onload
 var textInput = document.shakey.textinput.value;
  
@@ -50,8 +84,16 @@ var answers=[
  
 var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
  
-function shakeBall() {
-  var text = document.shakey.textinput.value.toLowerCase();
+function shakeBall(speechSaid) {
+	
+	var text;
+	
+	if(speechSaid === undefined){
+		text = document.shakey.textinput.value.toLowerCase();	
+	}else {
+		text = speechSaid.toLowerCase();
+	}
+  
   var textInput = text.replace(/[^A-Za-z0-9]/gi, '');
  
       switch(textInput) {

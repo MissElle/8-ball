@@ -176,6 +176,7 @@ function shakeBall(speechSaid) {
               break;
   }
   console.log(textInput);
+	changeToTalk();
 }
  
 //This is for the opening page, to fade in emojis

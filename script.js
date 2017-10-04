@@ -1,20 +1,33 @@
 //rewriting some code, event listeners
 
 var questionAsked;
+var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
 
 //These are the event listeners for the code
 
-document.getElementById('infinity-symbol').addEventListener('click', changeToText);
 window.addEventListener('shake', shakeBall);
 window.addEventListener('load', detectIfShakeSpeech);
 
 //function detects if speech to text is capable, or if permissions are not set
 
 function detectIfShakeSpeech() {
-	
+	if(webkitSpeechRecognition){
+		console.log('I am listening');
+		document.getElementById('infinity-symbol').addEventListener('click', changeToText);
+		if(window.DeviceOrientationEvent || window.DeviceMotionEvent){
+			 console.log('I have an accelerometer');
+				//remove all text except for initial instructions
+		}else{
+			console.log('I do not have an accelerometer');
+			//Allow talk to speech, but replace with button that gives answer
+		}
+	}else {
+		console.log('I am not listening');
+		//Make no changes to the DOM
+	}
 }
 
-//This function checks if a microphone is present on small media devices
+//This function changes spoken text to words and stores them in a global variable
 
 function changeToText() {
 	
@@ -31,19 +44,6 @@ function changeToText() {
 	
 	console.log(questionAsked);
 	
-	
-//	if(navigator.mediaDevices){
-//		 navigator.mediaDevices.getUserMedia({audio: true}).then(function(stream){
-//			 
-//		 });
-//		if(stream.getAudioTracks().length > 0){
-//		console.log('My audio is being accessed!');
-//		}else {
-//			console.log('Audio is being blocked')
-//		}
-//	}else{
-//		console.log('Audio is not available');
-//	}
 }
 
 //This is a fade in for the elements
@@ -65,39 +65,8 @@ function fadeOver(el) {
              
 }
  
-//This array contains all the answers to the proceeding function
- 
-var answers=[
-'<br><br>you will not find <br> the answers <br> here.',
-'<br>life has a strange<br> way of working <br> things out',
-'<br>please stop <br> asking me <br> questions',
-'<br><br>Trust in Science!',
-'you already know the <br> answer, you are <br> just avoiding <br> the <br> Truth',
-'<br>In the end <br> we are all <br> stardust',
-'<br><br>Think about your <br> life choices',
-'The idea of boundaries is laughable. Even in this document, there are no limits. All these boundaries were created to make you comfortable. And in that comfort you found complacency with the world around you, whilst constantly seeking a means to an end that does not exist. You can&apos;t even read the end of this variable object unless you have a smidgen of programming knowledge, and even then what did you achieve? An answer that does not exist.',
-'<br><br>"Death"',
-'<br><br>What does it <br>matter...',
-'<br><br>nothing matters <br> anyway',
-'<br><br>leave me alone',
-'<br><br>go away',
-'The definition of crazy is to repeat one&apos;s self <br> and expect a <br>different<br> answer.',
-'<br>free thought is an<br> illusion',
-'<br>we all <br> die <br> anyways',
-'<br>please don&apos;t ask<br>"Do they like me?"',
-'<br>we all make mistakes.<br> yours are just<br> bigger',
-'<br>I wish I was real<br> like you...',
-'<br>you matter,<br> you mass',
-'<br><br>42',
-'<br><br>yes',
-'<br><br>no',
-'<br><br>definitely<br>no',
-'<br>Why are you wasting<br> your time?',
-'<br><br>try again never',
-'<br><br>try again later'];
- 
-var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
- 
+//This function goes through answers and pulls them out of array below
+
 function shakeBall(speechSaid) {
 	
 	var text;
@@ -191,6 +160,37 @@ function shakeBall(speechSaid) {
   }
   console.log(textInput);
 }
+
+//This array contains all the answers to the proceeding function
+ 
+var answers=[
+'<br><br>you will not find <br> the answers <br> here.',
+'<br>life has a strange<br> way of working <br> things out',
+'<br>please stop <br> asking me <br> questions',
+'<br><br>Trust in Science!',
+'you already know the <br> answer, you are <br> just avoiding <br> the <br> Truth',
+'<br>In the end <br> we are all <br> stardust',
+'<br><br>Think about your <br> life choices',
+'The idea of boundaries is laughable. Even in this document, there are no limits. All these boundaries were created to make you comfortable. And in that comfort you found complacency with the world around you, whilst constantly seeking a means to an end that does not exist. You can&apos;t even read the end of this variable object unless you have a smidgen of programming knowledge, and even then what did you achieve? An answer that does not exist.',
+'<br><br>"Death"',
+'<br><br>What does it <br>matter...',
+'<br><br>nothing matters <br> anyway',
+'<br><br>leave me alone',
+'<br><br>go away',
+'The definition of crazy is to repeat one&apos;s self <br> and expect a <br>different<br> answer.',
+'<br>free thought is an<br> illusion',
+'<br>we all <br> die <br> anyways',
+'<br>please don&apos;t ask<br>"Do they like me?"',
+'<br>we all make mistakes.<br> yours are just<br> bigger',
+'<br>I wish I was real<br> like you...',
+'<br>you matter,<br> you mass',
+'<br><br>42',
+'<br><br>yes',
+'<br><br>no',
+'<br><br>definitely<br>no',
+'<br>Why are you wasting<br> your time?',
+'<br><br>try again never',
+'<br><br>try again later'];
  
 //This is for the opening page, to fade in emojis
  

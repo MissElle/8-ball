@@ -5,6 +5,15 @@ var typeSpace = document.getElementById('answer'); //Keep this global so the fad
 var triangle = document.getElementById('triangle'); //Declare this element so things fade in on the onload
 var textInput = document.shakey.textinput.value;
 
+//code needed for shake.js
+
+var myShakeEvent = new Shake({
+    threshold: 15,
+    timeout: 1000
+});
+
+myShakeEvent.start();
+
 //These are the event listeners for the code
 
 //event listener defined in detectIfShakeSpeech... changeToText();

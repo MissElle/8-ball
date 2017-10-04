@@ -2,10 +2,13 @@
 
 var questionAsked;
 var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
+var triangle = document.getElementById('triangle'); //Declare this element so things fade in on the onload
+var textInput = document.shakey.textinput.value;
 
 //These are the event listeners for the code
 
-window.addEventListener('shake', shakeBall);
+//event listener defined in detectIfShakeSpeech... changeToText();
+window.addEventListener('shake', shakeBall, false);
 window.addEventListener('load', detectIfShakeSpeech);
 
 //function detects if speech to text is capable, or if permissions are not set
@@ -42,14 +45,19 @@ function changeToText() {
 	}
 	userQuestion.start();
 	
-	console.log(questionAsked);
+}
+
+//This function will activate when device is shaken... submits form function
+
+function shakeBall() {
+	
+	submitQuestionData(questionAsked);
+	fadeOver(triangle);
+	fadeOver(textInput);
 	
 }
 
 //This is a fade in for the elements
-
-var triangle = document.getElementById('triangle'); //Declare this element so things fade in on the onload
-var textInput = document.shakey.textinput.value;
  
 function fadeOver(el) {
   var op = 0.1;
@@ -67,7 +75,7 @@ function fadeOver(el) {
  
 //This function goes through answers and pulls them out of array below
 
-function shakeBall(speechSaid) {
+function submitQuestionData(speechSaid) {
 	
 	var text;
 	

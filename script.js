@@ -1,6 +1,18 @@
 //rewriting some code, event listeners
 
-window.addEventListener('load', changeToTalk);
+var questionAsked;
+
+//These are the event listeners for the code
+
+document.getElementById('infinity-symbol').addEventListener('click', changeToTalk);
+window.addEventListener('shake', shakeBall);
+window.addEventListener('load', detectSpeechToText);
+
+//function detects if speech to text is capable, or if permissions are not set
+
+function detectSpeechToText() {
+	
+}
 
 //This function checks if a microphone is present on small media devices
 
@@ -8,14 +20,16 @@ function changeToTalk() {
 	
 	var userQuestion = new webkitSpeechRecognition();
 		userQuestion.onresult = function(event) { 
-  	console.log(event);
-		console.log(event.results[0][0].transcript);
+//  	console.log(event);
+//		console.log(event.results[0][0].transcript);
 			
-		var questionAsked = event.results[0][0].transcript;
+		questionAsked = event.results[0][0].transcript;
 			
-		shakeBall(questionAsked);
+//		shakeBall(questionAsked);
 	}
 	userQuestion.start();
+	
+	console.log(questionAsked);
 	
 	
 //	if(navigator.mediaDevices){
@@ -176,7 +190,6 @@ function shakeBall(speechSaid) {
               break;
   }
   console.log(textInput);
-	changeToTalk();
 }
  
 //This is for the opening page, to fade in emojis

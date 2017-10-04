@@ -4,19 +4,19 @@ var questionAsked;
 
 //These are the event listeners for the code
 
-document.getElementById('infinity-symbol').addEventListener('click', changeToTalk);
+document.getElementById('infinity-symbol').addEventListener('click', changeToText);
 window.addEventListener('shake', shakeBall);
-window.addEventListener('load', detectSpeechToText);
+window.addEventListener('load', detectIfShakeSpeech);
 
 //function detects if speech to text is capable, or if permissions are not set
 
-function detectSpeechToText() {
+function detectIfShakeSpeech() {
 	
 }
 
 //This function checks if a microphone is present on small media devices
 
-function changeToTalk() {
+function changeToText() {
 	
 	var userQuestion = new webkitSpeechRecognition();
 		userQuestion.onresult = function(event) { 

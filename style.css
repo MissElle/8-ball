@@ -273,3 +273,7 @@ input {
    animation: color .7s ease-in-out;
   text-shadow: .2vh .2vh #03132d;
 }
+
+#infinity-symbol {
+	cursor: pointer;
+}

@@ -28,13 +28,13 @@
  
       <header class="center">
         <h1>Nihilist &#8734; Ball</h1>
-        <img src="images/infinity-reverse-warp.png" alt="The Infinity Ball">
+        <img src="images/infinity-reverse-warp.png" alt="The Infinity Ball" id="infinity-symbol">
       </header>
  
       <article class="center">
         <h2>All the Answers Are Belong to Us</h2>
      
-        <form onsubmit="shakeBall(), fadeOver(typeSpace), fadeOver(triangle)" name="shakey" value="shakey">     
+        <form onsubmit="shakeBall(), fadeOver(typeSpace), fadeOver(triangle)" name="shakey" id="shakey">     
           <input type="text" name="textinput" id="textinput" value="">
           <input type="submit" value="Shake Me" class="hide">    
         </form>
@@ -42,7 +42,7 @@
           <div class="light center">
             <div class="circle center">
               <div id="triangle"></div>
-              <div id="answer""></div>
+              <div id="answer"></div>
             </div>
           </div>
         </div>
@@ -58,6 +58,7 @@
     <div class="radial-shine"></div>
     <div class="radial-back"></div>
  
+		<script src="shake.js"></script>
     <script src="script.js"></script>
     
   </body>

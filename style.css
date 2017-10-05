@@ -160,6 +160,8 @@ input {
 }
  
 .shadow {
+	position: absolute;
+	top: 52vh;
   height: 38vh;
   width: 38vh;
   border-radius: 75em;

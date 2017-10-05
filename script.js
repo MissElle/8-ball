@@ -22,15 +22,8 @@ myShakeEvent.start();
 window.addEventListener('shake', shakeBall, false);
 window.addEventListener('load', detectIfGyro);
 //function detectIfShakeSpeech() in detectIfGyro;
-window.addEventListener('devicemotion', function(event) {
-	console.log(event);
-	console.log(event.rotationRate);
-});
-window.addEventListener('deviceorientation', function(event){
-	console.log(event);
-	console.log(event.gamma);
-});
 
+//function will see if a gyroscope exists with accelerometer for shaking function... derived from user Dhyey Shah in https://stackoverflow.com/questions/33833492/how-do-i-detect-if-a-device-has-a-gyroscope-in-a-web-browser
 
 function detectIfGyro(){
 	window.ondevicemotion = function(event){
@@ -51,11 +44,9 @@ function detectIfShakeSpeech() {
 		
 		if(gyroscope === true){
 			 console.log('I have an accelerometer');
-			typeSpace.innerHTML = '<p>This is defined</p>';
 				//remove all text except for initial instructions
 		}else{
 			console.log('I do not have an accelerometer');
-			typeSpace.innerHTML = '<p>This is undefined</p>';
 			//Allow talk to speech, but replace with button that gives answer
 		}
 	}else {
@@ -240,8 +231,8 @@ var emoticons = ['<br><br>>_<', '<br><br>(O_O)', '<br><br>-_-;', '<br><br>TT_TT'
 '<br><br>ب_ب', '<br><br>Ծ_Ծ', '<br><br>(⋋▂⋌)', '<br><br>Ծ_Ծ', '<br><br>ತ_ತ', '<br><br>מּ_מּ', '<br><br>\(!!˚☐˚)/', '<br><br>(T∩T)', '<br><br>(︶︹︺)', '<br><br>(⌣_⌣”)', '<br><br>(⊙︿⊙)', '<br><br>(｡•́︿•̀｡)', '<br><br>●︿●', '<br><br>ōۃō', '<br><br>(∩︵∩)', '<br><br>@_@', '<br><br>(๑°︿°๑)', '<br><br>ಠ╭╮ಠ', '<br><br>ʕ ಡ ﹏ ಡ ʔ', '<br><br>ಗಾ ﹏ ಗಾ', '<br><br>(⌣_⌣”)', '<br><br>(X╭╮X)', '<br><br>X_X', '<br><br>( ɵ̥̥ _ ɵ̥̥)', '<br><br>(;﹏;)', '<br><br>(˃̩̩̥ɷ˂̩̩̥)', '<br><br>(´;︵;`)', '<br><br>(ఠ్ఠ ˓̭ ఠ్ఠ)', '<br><br>(-_-｡)'];
  
 function getFace() {
-//for(var i=0; i < emoticons.length; i++) {
-//  var face = Math.floor(Math.random() * emoticons.length);}
-//  typeSpace.innerHTML = '<p class="blue">' + emoticons[face] + '</p>';
+	for(var i=0; i < emoticons.length; i++) {
+		var face = Math.floor(Math.random() * emoticons.length);}
+		typeSpace.innerHTML = '<p class="blue">' + emoticons[face] + '</p>';
   event.preventDefault();
 }

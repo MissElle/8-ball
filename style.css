@@ -105,6 +105,10 @@ h1 {
 	padding: .8rem;
 }
 
+@media screen and (max-width: 34.375em){
+	#directions {font-size: 2vw;}
+}
+
 img {
   width: 68vh;
   z-index: 7;

@@ -318,4 +318,5 @@ button#noShake:active {
 
 #infinity-symbol {
 	cursor: pointer;
+	outline: none;
 }

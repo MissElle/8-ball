@@ -7,8 +7,8 @@ html {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 }
 
 body{
@@ -16,8 +16,9 @@ body{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
 }
  
 .container {
@@ -46,7 +47,7 @@ body{
 	opacity: 1;
 }
 
-h2.fade-in {animation-duration: 1.5s;}
+#directions.fade-in {animation-duration: 1.5s;}
 button.fade-in {animation-duration: 2s;}
 input.fade-in {animation-duration: 2s;}
 

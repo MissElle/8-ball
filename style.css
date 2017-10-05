@@ -34,7 +34,22 @@ body{
   flex-flow: column wrap;
   text-align: center;
 }
- 
+
+@keyframes fadeInObjects {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.fade-in {
+	animation: linear fadeInObjects;
+	opacity: 1;
+}
+
+h2.fade-in {animation-duration: 1.5s;}
+button.fade-in {animation-duration: 2s;}
+input.fade-in {animation-duration: 2s;}
+
 header {
   width: 100%;
   z-index: 96;
@@ -272,6 +287,30 @@ input {
   -moz-animation: color .7s ease-in-out;
    animation: color .7s ease-in-out;
   text-shadow: .2vh .2vh #03132d;
+}
+
+/*This stylings will change based on if the device has a gyroscope or a webkitspeech abilities*/
+
+button#noShake {
+	font-size: 3.5vh;
+	font-family: 'Annie Use Your Telescope', cursive;
+	font-weight: bold;
+	background: linear-gradient(180deg, #fdffed, #e2e5cc);
+	-moz-background: linear-gradient(180deg, #fdffed, #e2e5cc);
+	-o-background: linear-gradient(180deg, #fdffed, #e2e5cc);
+	-webkit-background: linear-gradient(180deg, #fdffed, #e2e5cc);
+	width: auto;
+	cursor: pointer;
+	z-index: 99;
+	border-radius: 2em;
+	color: #080c3f;
+	outline: none;
+	border-color: #ffffff #ccd6e5 #ccd6e5 #ffffff;
+	margin-bottom: 2.5vh;
+}
+
+button#noShake:active {
+	border-color: #ccd6e5 #ffffff #ffffff #ccd6e5;
 }
 
 #infinity-symbol {

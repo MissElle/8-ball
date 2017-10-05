@@ -95,7 +95,7 @@ h1 {
 h2 {
   font-family: 'Annie Use Your Telescope', cursive;
   font-size: 3.4vh;
-	display: block;
+	display: table-cell;
   position: relative;
   top: 0;
 }

@@ -50,12 +50,12 @@ function detectIfShakeSpeech() {
 		lastForm.style.display = 'none';
 		
 		if(gyroscope === true){
-//			console.log('I have an accelerometer');
+//			console.log('I have a gyroscope');
 			buttonShake.style.display = 'none';
 			h2Directions.innerHTML = 'Click the &#x221e; to ask a Question.  Then shake your device to get an Answer!';
 			
 		}else{
-			//console.log('I do not have an accelerometer');
+			//console.log('I do not have a gyroscope');
 			buttonShake.style.display = 'block';
 		}
 	}else {

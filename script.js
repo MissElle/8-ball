@@ -1,6 +1,8 @@
-//rewriting some code, event listeners
+//script.js for infinity-ball
 
 var questionAsked;
+var gyroscope = false;
+
 var typeSpace = document.getElementById('answer'); //Keep this global so the fadeOver function can be called during onSubmit of the form
 var triangle = document.getElementById('triangle'); //Declare this element so things fade in on the onload
 var textInput = document.shakey.textinput.value;
@@ -18,7 +20,27 @@ myShakeEvent.start();
 
 //event listener defined in detectIfShakeSpeech... changeToText();
 window.addEventListener('shake', shakeBall, false);
-window.addEventListener('load', detectIfShakeSpeech);
+window.addEventListener('load', detectIfGyro);
+//function detectIfShakeSpeech() in detectIfGyro;
+window.addEventListener('devicemotion', function(event) {
+	console.log(event);
+	console.log(event.rotationRate);
+});
+window.addEventListener('deviceorientation', function(event){
+	console.log(event);
+	console.log(event.gamma);
+});
+
+
+function detectIfGyro(){
+	window.ondevicemotion = function(event){
+		if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma){
+			gyroscope = true;
+		}
+		detectIfShakeSpeech();
+	}
+}
+
 
 //function detects if speech to text is capable, or if permissions are not set
 
@@ -27,13 +49,13 @@ function detectIfShakeSpeech() {
 		console.log('I am listening');
 		document.getElementById('infinity-symbol').addEventListener('click', changeToText);
 		
-		if(DeviceOrientationEvent.absolute || DeviceMotionEvent.acceleration){
-			 console.log('I have an accelerometer Absolute:' + DeviceOrientationEvent + ' Accleration:' + DeviceMotionEvent);
-//			typeSpace.innerHTML = '<p>This is not undefined</p>';
+		if(gyroscope === true){
+			 console.log('I have an accelerometer');
+			typeSpace.innerHTML = '<p>This is defined</p>';
 				//remove all text except for initial instructions
 		}else{
-			console.log('I do not have an accelerometer' + DeviceOrientationEvent + ' Accleration:' + DeviceMotionEvent);
-//			typeSpace.innerHTML = '<p>This is undefined</p>';
+			console.log('I do not have an accelerometer');
+			typeSpace.innerHTML = '<p>This is undefined</p>';
 			//Allow talk to speech, but replace with button that gives answer
 		}
 	}else {
@@ -218,8 +240,8 @@ var emoticons = ['<br><br>>_<', '<br><br>(O_O)', '<br><br>-_-;', '<br><br>TT_TT'
 '<br><br>ب_ب', '<br><br>Ծ_Ծ', '<br><br>(⋋▂⋌)', '<br><br>Ծ_Ծ', '<br><br>ತ_ತ', '<br><br>מּ_מּ', '<br><br>\(!!˚☐˚)/', '<br><br>(T∩T)', '<br><br>(︶︹︺)', '<br><br>(⌣_⌣”)', '<br><br>(⊙︿⊙)', '<br><br>(｡•́︿•̀｡)', '<br><br>●︿●', '<br><br>ōۃō', '<br><br>(∩︵∩)', '<br><br>@_@', '<br><br>(๑°︿°๑)', '<br><br>ಠ╭╮ಠ', '<br><br>ʕ ಡ ﹏ ಡ ʔ', '<br><br>ಗಾ ﹏ ಗಾ', '<br><br>(⌣_⌣”)', '<br><br>(X╭╮X)', '<br><br>X_X', '<br><br>( ɵ̥̥ _ ɵ̥̥)', '<br><br>(;﹏;)', '<br><br>(˃̩̩̥ɷ˂̩̩̥)', '<br><br>(´;︵;`)', '<br><br>(ఠ్ఠ ˓̭ ఠ్ఠ)', '<br><br>(-_-｡)'];
  
 function getFace() {
-for(var i=0; i < emoticons.length; i++) {
-  var face = Math.floor(Math.random() * emoticons.length);}
-  typeSpace.innerHTML = '<p class="blue">' + emoticons[face] + '</p>';
+//for(var i=0; i < emoticons.length; i++) {
+//  var face = Math.floor(Math.random() * emoticons.length);}
+//  typeSpace.innerHTML = '<p class="blue">' + emoticons[face] + '</p>';
   event.preventDefault();
 }

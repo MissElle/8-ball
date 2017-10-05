@@ -32,10 +32,12 @@
       </header>
  
       <article class="center">
-        <h2>All the Answers Are Belong to Us</h2>
-     
-        <form onsubmit="submitQuestionData(), fadeOver(typeSpace), fadeOver(triangle)" name="shakey" id="shakey">     
-          <input type="text" name="textinput" id="textinput" value="">
+        <h2 id="directions" class="fade-in">All the Answers Are Belong to Us</h2>
+     		
+				<button id="noShake" class="fade-in">Shake Me!</button>
+				
+        <form onsubmit="submitQuestionData(), fadeOver(typeSpace), fadeOver(triangle)" name="shakey" id="noSpeech">     
+          <input type="text" name="textinput" id="textinput" value="" class="fade-in">
           <input type="submit" value="Shake Me" class="hide">    
         </form>
         <div class="shadow center">

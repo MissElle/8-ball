@@ -52,7 +52,7 @@ function detectIfShakeSpeech() {
 		if(gyroscope === true){
 //			console.log('I have a gyroscope');
 			buttonShake.style.display = 'none';
-			h2Directions.innerHTML = 'Click the &#x221e; to ask a Question.  Then shake your device to get an Answer!';
+			h2Directions.innerHTML = 'Click &#x221e; and ask a Question. Then shake!';
 			
 		}else{
 			//console.log('I do not have a gyroscope');

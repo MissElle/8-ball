@@ -22,6 +22,7 @@ myShakeEvent.start();
 window.addEventListener('shake', shakeBall, false);
 window.addEventListener('load', detectIfGyro);
 //function detectIfShakeSpeech() in detectIfGyro;
+document.getElementById('noShake').addEventListener('click', shakeBall);
 
 //function will see if a gyroscope exists with accelerometer for shaking function... derived from user Dhyey Shah in https://stackoverflow.com/questions/33833492/how-do-i-detect-if-a-device-has-a-gyroscope-in-a-web-browser
 
@@ -38,20 +39,27 @@ function detectIfGyro(){
 //function detects if speech to text is capable, or if permissions are not set
 
 function detectIfShakeSpeech() {
+	var h2Directions = document.getElementById('directions');
+	var buttonShake = document.getElementById('noShake');
+	var lastForm = document.getElementById('noSpeech');
+	
 	if(webkitSpeechRecognition){
-		console.log('I am listening');
 		document.getElementById('infinity-symbol').addEventListener('click', changeToText);
 		
+		h2Directions.innerHTML = 'Click the &#x221e; to ask a Question.'
+		lastForm.style.display = 'none';
+		
 		if(gyroscope === true){
-			 console.log('I have an accelerometer');
-				//remove all text except for initial instructions
+//			console.log('I have an accelerometer');
+			buttonShake.style.display = 'none';
+			h2Directions.innerHTML += '<br>Then shake your device to get an Answer';
+			
 		}else{
-			console.log('I do not have an accelerometer');
-			//Allow talk to speech, but replace with button that gives answer
+			//console.log('I do not have an accelerometer');
+			buttonShake.style.display = 'block';
 		}
 	}else {
-		console.log('I am not listening');
-		//Make no changes to the DOM
+		lastForm.style.display = 'block';
 	}
 }
 

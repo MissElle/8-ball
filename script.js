@@ -46,13 +46,13 @@ function detectIfShakeSpeech() {
 	if(webkitSpeechRecognition){
 		document.getElementById('infinity-symbol').addEventListener('click', changeToText);
 		
-		h2Directions.innerHTML = 'Click the &#x221e; to ask a Question.'
+		h2Directions.innerHTML = 'Click &#x221e; to ask a Question.'
 		lastForm.style.display = 'none';
 		
 		if(gyroscope === true){
 //			console.log('I have a gyroscope');
 			buttonShake.style.display = 'none';
-			h2Directions.innerHTML = 'Click &#x221e; and ask a Question. Then shake!';
+			h2Directions.innerHTML = 'Click &#x221e; and ask a Question. Then shake to get your answer!';
 			
 		}else{
 			//console.log('I do not have a gyroscope');
